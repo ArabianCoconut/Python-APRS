@@ -1,10 +1,5 @@
-import re
 from flask import Flask, redirect, render_template, request,url_for
 from aprspass import aprspass
-
-"""
-This module provides a Flask web application that generates APRS passcodes.
-"""
 
 app = Flask(__name__)
 
