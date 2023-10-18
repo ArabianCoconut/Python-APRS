@@ -4,13 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/src/static/materialize.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Python-APRS</title>
 </head>
 <body>
-<form method="post">
+    <div class="col s6 black-text center-align">
+        <h3>Python-APRS</h3>
+        <h4> By Hams for Hams </h4>
+    </div>
+    <div class="row">
+        <div class="col s6">
+            <form method="post">
+                <label class="black-text" style="font-size: medium;font-weight: bold;"  for="callsign">Enter your callsign:</label>
+                <input type="text" id="callsign" name="call_sign">
+                <button class="btn black" type="submit" name="action">Submit<i class="material-icons right"> send </i></button>
+            </form>
+        </div>
+    </div>
+    <div class="page-footer black-text center-align">
+        <!-- <footer>Hello</footer>  Todo: Add footer -->
+    </div>
+<!-- <form method="post">
     <label for="callsign">Enter your callsign:</label>
     <input type="text" id="callsign" name="call_sign">
     <button type="submit">Submit</button>
-</form>
+</form> -->
+<script src="/src/static/materialize.js"></script>
 </body>
 </html>
