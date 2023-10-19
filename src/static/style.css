@@ -1,0 +1,25 @@
+/* Custom CSS for placeholder */
+::-webkit-input-placeholder {
+   color: black;
+   font-weight: medium;
+   text-align: center;
+}
+
+ :-moz-placeholder { /* Firefox 18- */
+   color: black;  
+   font-weight: medium;
+   text-align: center;
+}
+
+ ::-moz-placeholder {  /* Firefox 19+ */
+   color: black;  
+   font-weight: medium;
+   text-align: center;
+}
+
+:-ms-input-placeholder {  
+   color: black;  
+   font-weight: medium;
+   text-align: center;
+}
+

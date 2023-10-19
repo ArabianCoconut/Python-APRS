@@ -8,8 +8,7 @@ def index():
     if request.method == 'POST':
         call=request.form.get('call_sign')
         passcode = aprspass(call)
-        return render_template('result.html', call=call, passcode=passcode)
-
+        return render_template('index.html', passcode=passcode)
     return render_template('index.html')
 
 if __name__ == '__main__':

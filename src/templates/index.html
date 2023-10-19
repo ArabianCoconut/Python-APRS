@@ -1,35 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- To implement https://materializecss.com/getting-started.html -->
+<!-- UI/UX https://materializecss.com/getting-started.html -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/src/static/materialize.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="{{ url_for('static',filename='style.css')}}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Python-APRS</title>
 </head>
 <body>
     <div class="col s6 black-text center-align">
-        <h3>Python-APRS</h3>
-        <h4> By Hams for Hams </h4>
+        <h3>Python-APRS  Passcode Generator</h3>
+        <h4>By Hams for Hams</h4>
     </div>
     <div class="row">
-        <div class="col s6">
-            <form method="post">
-                <label class="black-text" style="font-size: medium;font-weight: bold;"  for="callsign">Enter your callsign:</label>
-                <input type="text" id="callsign" name="call_sign">
-                <button class="btn black" type="submit" name="action">Submit<i class="material-icons right"> send </i></button>
-            </form>
+        <div class="col s12 m12 l12 black-text" style="font-size: medium">
+            <ul style="list-style-type:disc">
+                <li>This portal for APRS is made by VU3IAI/N0ISS</li>
+                <li>For more information on APRS, visit <a href="http://aprs.org">APRS.org</a></li>
+                <li>Source code is available at <a href="https://github.com/ArabianCoconut/Python-APRS">Github</a></li>
+            </ul>
+            
         </div>
     </div>
-    <div class="page-footer black-text center-align">
-        <!-- <footer>Hello</footer>  Todo: Add footer -->
-    </div>
-<!-- <form method="post">
-    <label for="callsign">Enter your callsign:</label>
-    <input type="text" id="callsign" name="call_sign">
-    <button type="submit">Submit</button>
-</form> -->
-<script src="/src/static/materialize.js"></script>
+
+    <div class="row center-align">
+        <div class="col s6 m6 l6 center-align">
+            <form method="post">
+                <label class="black-text" style="font-size: medium;font-weight: bold;"  for="callsign">Enter your callsign:</label>
+                <input  type="text" id="callsign" name="call_sign" placeholder="Example N0ISS">
+                <button class="btn black right-align" type="submit" name="action">Submit<i class="material-icons right"> send </i></button>
+            </form>
+        </div>
+        <div class="col s6 m6 l6 center-align">
+            <form method="get">
+                <label class="black-text" style="font-size: medium;font-weight: bold;">Passcode:</label>
+                <input class="black-text" style="text-align: center; font-weight: bold;" type="text" id="passcode" name="passcode" value="{{ passcode }}" disabled>
+                <span class="helper-text">Copy and paste this passcode into your APRS software</span>
+            </form>
+        </div>
+    </div>    
+
+
+<!-- <script src="/src/static/materialize.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 </html>
